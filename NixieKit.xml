@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\mtakao\Dropbox\Dev\KiCad\NixieKit\NixieKit.sch</source>
-    <date>2017/10/09 3:02:42</date>
-    <tool>Eeschema 4.0.7</tool>
+    <source>C:/Users/Minori Takao/Dropbox/Dev/KiCad/NixieClockKit/NixieKit.sch</source>
+    <date>2017/10/10 12:05:27</date>
+    <tool>Eeschema 4.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -50,14 +50,14 @@
     <comp ref="J4">
       <value>Conn_02x03_Odd_Even</value>
       <footprint>Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_02x03_Odd_Even"/>
+      <libsource lib="NixieKit-cache" part="Conn_02x03_Odd_Even"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59D9FE88</tstamp>
     </comp>
     <comp ref="J2">
       <value>Conn_01x05</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x05"/>
+      <libsource lib="NixieKit-cache" part="Conn_01x05"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59DA01ED</tstamp>
     </comp>
@@ -71,14 +71,14 @@
     <comp ref="J1">
       <value>Conn_01x04</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x04"/>
+      <libsource lib="NixieKit-cache" part="Conn_01x04"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59DA0615</tstamp>
     </comp>
     <comp ref="J3">
       <value>Conn_01x04</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x04"/>
+      <libsource lib="NixieKit-cache" part="Conn_01x04"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59DA0A7B</tstamp>
     </comp>
@@ -113,14 +113,14 @@
     <comp ref="J6">
       <value>Conn_01x05</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x05"/>
+      <libsource lib="NixieKit-cache" part="Conn_01x05"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59DA5FB3</tstamp>
     </comp>
     <comp ref="J7">
       <value>Conn_01x05</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x05"/>
+      <libsource lib="NixieKit-cache" part="Conn_01x05"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59DA66AB</tstamp>
     </comp>
@@ -183,7 +183,7 @@
     <comp ref="J5">
       <value>Conn_01x04</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
-      <libsource lib="conn" part="Conn_01x04"/>
+      <libsource lib="NixieKit-cache" part="Conn_01x04"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59DB4C3E</tstamp>
     </comp>
@@ -255,9 +255,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="Conn_01x04">
-      <description>Generic connector, single row, 01x04</description>
-      <docs>~</docs>
+    <libpart lib="NixieKit-cache" part="Conn_01x04">
       <footprints>
         <fp>Connector*:*_??x*mm*</fp>
         <fp>Connector*:*1x??x*mm*</fp>
@@ -277,9 +275,7 @@
         <pin num="4" name="Pin_4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="Conn_01x05">
-      <description>Generic connector, single row, 01x05</description>
-      <docs>~</docs>
+    <libpart lib="NixieKit-cache" part="Conn_01x05">
       <footprints>
         <fp>Connector*:*_??x*mm*</fp>
         <fp>Connector*:*1x??x*mm*</fp>
@@ -300,9 +296,7 @@
         <pin num="5" name="Pin_5" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="Conn_02x03_Odd_Even">
-      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers)</description>
-      <docs>~</docs>
+    <libpart lib="NixieKit-cache" part="Conn_02x03_Odd_Even">
       <footprints>
         <fp>Connector*:*2x??x*mm*</fp>
         <fp>Connector*:*2x???Pitch*</fp>
@@ -383,7 +377,7 @@
     </libpart>
     <libpart lib="opto" part="TLP627-2">
       <description>DC Dual Darlington Optocoupler, Vce 300V, CTR 1000%, DIP8</description>
-      <docs>https://toshiba.semicon-storage.com/info/docget.jsp?did=16914&amp;prodName=TLP627</docs>
+      <docs>http://www.semicon.toshiba.co.jp/docs/datasheet/en/Opto/TLP627_TLP627-4_en_datasheet_071001.pdf</docs>
       <footprints>
         <fp>DIP*W7.62mm*</fp>
       </footprints>
@@ -415,17 +409,17 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="conn">
-      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
     </library>
     <library logical="NixieKitLib">
-      <uri>C:\Users\mtakao\Dropbox\Dev\KiCad\NixieKit\NixieKitLib.lib</uri>
+      <uri>C:\Users\Minori Takao\Dropbox\Dev\KiCad\NixieClockKit\NixieKitLib.lib</uri>
+    </library>
+    <library logical="NixieKit-cache">
+      <uri>C:\Users\Minori Takao\Dropbox\Dev\KiCad\NixieClockKit\NixieKit-cache.lib</uri>
     </library>
     <library logical="opto">
       <uri>C:\Program Files\KiCad\share\kicad\library\opto.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
     </library>
     <library logical="atmel">
       <uri>C:\Program Files\KiCad\share\kicad\library\atmel.lib</uri>
