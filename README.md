@@ -20,3 +20,4 @@ Arduino Unoとして使うためにAVRを載せているが、Arduino Nanoクロ
 
 デメリット
 * マイコンの信頼性が無い
+
