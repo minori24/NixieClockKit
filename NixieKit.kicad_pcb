@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.7)
+(kicad_pcb (version 4) (host pcbnew 4.0.6)
 
   (general
     (links 83)
@@ -198,7 +198,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm (layer F.Cu) (tedit 597BC7C2) (tstamp 59DA691B)
-    (at 172 108 180)
+    (at 172 104.4 180)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 5mm width 2.5mm Capacitor")
     (path /59D9FAF4)
@@ -235,7 +235,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm (layer F.Cu) (tedit 597BC7C2) (tstamp 59DA6921)
-    (at 159 134)
+    (at 159 130.4)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 5mm width 2.5mm Capacitor")
     (path /59DA0452)
@@ -272,7 +272,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm (layer F.Cu) (tedit 597BC7C2) (tstamp 59DA6927)
-    (at 138 117 90)
+    (at 138 113.4 90)
     (descr "C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
     (tags "C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor")
     (path /59D9FC3B)
@@ -311,7 +311,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm (layer F.Cu) (tedit 597BC7C2) (tstamp 59DA692D)
-    (at 152 134)
+    (at 152 130.4)
     (descr "C, Disc series, Radial, pin pitch=2.50mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
     (tags "C Disc series Radial pin pitch 2.50mm  diameter 5mm width 2.5mm Capacitor")
     (path /59D9FD4C)
@@ -348,7 +348,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm (layer F.Cu) (tedit 597BC7C2) (tstamp 59DA6933)
-    (at 166 108 180)
+    (at 166 104.4 180)
     (descr "C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
     (tags "C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor")
     (path /59DA1415)
@@ -387,7 +387,7 @@
   )
 
   (module Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm (layer F.Cu) (tedit 597BC7C2) (tstamp 59DA6939)
-    (at 142 108)
+    (at 142 104.4)
     (descr "C, Disc series, Radial, pin pitch=5.00mm, , diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
     (tags "C Disc series Radial pin pitch 5.00mm  diameter 5mm width 2.5mm Capacitor")
     (path /59DA148C)
@@ -426,7 +426,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA6941)
-    (at 182 127)
+    (at 182 123.4)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /59DA0615)
@@ -470,7 +470,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA694A)
-    (at 142 140 90)
+    (at 142 136.4 90)
     (descr "Through hole straight pin header, 1x05, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x05 2.54mm single row")
     (path /59DA01ED)
@@ -516,7 +516,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA6952)
-    (at 136 127)
+    (at 136 123.4)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /59DA0A7B)
@@ -560,7 +560,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA695C)
-    (at 172 127)
+    (at 172 123.4)
     (descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
     (tags "Through hole pin header THT 2x03 2.54mm double row")
     (path /59D9FE88)
@@ -610,7 +610,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA6964)
-    (at 165 140 90)
+    (at 165 136.4 90)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /59DB4C3E)
@@ -654,7 +654,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA696D)
-    (at 182 94)
+    (at 182 90.4)
     (descr "Through hole straight pin header, 1x05, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x05 2.54mm single row")
     (path /59DA5FB3)
@@ -700,7 +700,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA6976)
-    (at 136 94)
+    (at 136 90.4)
     (descr "Through hole straight pin header, 1x05, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x05 2.54mm single row")
     (path /59DA66AB)
@@ -746,7 +746,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 59DA697C)
-    (at 156 125)
+    (at 156 121.4)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (path /59DA1A27)
@@ -784,7 +784,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 59DA6982)
-    (at 141 125)
+    (at 141 121.4)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (path /59DA71FE)
@@ -822,7 +822,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 59DA6988)
-    (at 142 88)
+    (at 142 84.4)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (path /59DAB4EF)
@@ -860,7 +860,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 59DA698E)
-    (at 141 129)
+    (at 141 125.4)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (path /59DA7396)
@@ -898,7 +898,7 @@
   )
 
   (module Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal (layer F.Cu) (tedit 5874F706) (tstamp 59DA6994)
-    (at 176 88 180)
+    (at 176 84.4 180)
     (descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
     (tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
     (path /59DAB676)
@@ -936,7 +936,7 @@
   )
 
   (module Housings_DIP:DIP-28_W7.62mm_LongPads (layer F.Cu) (tedit 59C78D6B) (tstamp 59DA69B4)
-    (at 176 113 270)
+    (at 176 109.4 270)
     (descr "28-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads")
     (path /59D9F99D)
@@ -1028,7 +1028,7 @@
   )
 
   (module Housings_DIP:DIP-8_W7.62mm (layer F.Cu) (tedit 59C78D6B) (tstamp 59DA69C0)
-    (at 143 103 90)
+    (at 143 99.4 90)
     (descr "8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil")
     (path /59DA8F0C)
@@ -1080,7 +1080,7 @@
   )
 
   (module Housings_DIP:DIP-16_W7.62mm_LongPads (layer F.Cu) (tedit 59C78D6B) (tstamp 59DA69D4)
-    (at 158 103 90)
+    (at 158 99.4 90)
     (descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads")
     (path /59DA9D5B)
@@ -1146,7 +1146,7 @@
   )
 
   (module NixieKitLib:IN-12B (layer F.Cu) (tedit 59DA57FA) (tstamp 59DA69E5)
-    (at 147 70)
+    (at 148.4 65.6)
     (path /59DAB0B8)
     (fp_text reference U4 (at 0.2 4.8) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1193,7 +1193,7 @@
   )
 
   (module NixieKitLib:IN-12B (layer F.Cu) (tedit 59DA57FA) (tstamp 59DA69F6)
-    (at 170 70)
+    (at 171 65.6)
     (path /59DAB135)
     (fp_text reference U5 (at 0.2 4.8) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1240,7 +1240,7 @@
   )
 
   (module NixieKitLib:XTAL_HUSG-16.000-20 (layer F.Cu) (tedit 59DA64CD) (tstamp 59DA6A01)
-    (at 154 108 180)
+    (at 154 104.4 180)
     (path /59DA11FB)
     (fp_text reference Y1 (at 3.2 3.8 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))

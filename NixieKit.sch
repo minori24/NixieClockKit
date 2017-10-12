@@ -971,4 +971,19 @@ Text Notes 4300 4900 0    60   ~ 0
 Power Pin Headers
 Text Notes 750  1000 0    60   ~ 0
 Pin Compatible for ATMEGA88/168/328P-PU
+$Comp
+L Conn_01x05 J?
+U 1 1 59DE4B32
+P 5650 4300
+F 0 "J?" H 5650 4600 50  0000 C CNN
+F 1 "Conn_01x05" H 5650 4000 50  0000 C CNN
+F 2 "" H 5650 4300 50  0001 C CNN
+F 3 "" H 5650 4300 50  0001 C CNN
+	1    5650 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4100 5000 4100
+Text Label 5000 4100 0    60   ~ 0
+RTCHEADER
 $EndSCHEMATC

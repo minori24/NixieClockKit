@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.6)
+(kicad_pcb (version 4) (host pcbnew 4.0.7)
 
   (general
     (links 83)
     (no_connects 83)
-    (area 131.252381 48.924999 186.74762 144.747619)
+    (area 131.252381 44.3 194.45 144.747619)
     (thickness 1.6)
     (drawings 6)
     (tracks 0)
@@ -426,7 +426,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA6941)
-    (at 182 122)
+    (at 182 127)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /59DA0615)
@@ -516,7 +516,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 59DA6952)
-    (at 136 122)
+    (at 136 127)
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /59DA0A7B)
@@ -1080,7 +1080,7 @@
   )
 
   (module Housings_DIP:DIP-16_W7.62mm_LongPads (layer F.Cu) (tedit 59C78D6B) (tstamp 59DA69D4)
-    (at 159 103 90)
+    (at 158 103 90)
     (descr "16-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads")
     (path /59DA9D5B)
