@@ -204,7 +204,7 @@ void setMode(){
   else{
     mode = MODE_NORMAL;
     Serial.println("Mode: NORMAL");
-    bTimeSetDone = 1;
+    bTimeSetDone = 0;
     bCountStart = 0;
   }
 }
@@ -235,9 +235,9 @@ void loop() {
   while(1){
       if(bTimeSetDone == 1){
         DateTime now = RTC.now();
-        DateTime newDate = DateTime(now.year(), now.month(), now.day(), hour, minute, now.second());
+        DateTime newDate = DateTime(now.year(), now.month(), now.day(), hour, minute, 50);
         RTC.adjust(newDate);
-        bTimeSetDone == 0;
+        bTimeSetDone = 0;
      }
      
     if(mode == MODE_NORMAL){
@@ -282,12 +282,15 @@ void loop() {
           buttonPressCount = 0;
           bCountStart = 0;
         }
-      }
+      } 
    }
   
     delay(50);
     Wire.beginTransmission(ADDR_MIN);
     Wire.write(minute);
-    Wire.endTransmission();  
+    Wire.endTransmission();
+
+    DateTime date = RTC.now();
+    Serial.println(String(hour) + ":" + String(minute) + ":" + String(date.second()));
  }  
 }
