@@ -4,6 +4,10 @@ uint8_t _nixA, _nixB, _pinA, _pinB, _pinC, _pinD;
 uint8_t sel = 0;
 uint8_t _interval = 10;
 uint8_t _numA, _numB;
+uint8_t bBlink = 0;
+
+uint8_t mode = MODE_NORMAL;
+unsigned long elaplsed, _interval_blink = 0;
 
 // nixA/B: Anode control pins for each digit
 // pinX: BCD Code digit pins for K155ID1
@@ -39,15 +43,16 @@ void NixieDynamic::setInterval(uint8_t t)
   FlexiTimer2::start();
 }
 
-void NixieDynamic::write(uint8_t numA, uint8_t numB)
+// num: 0 - 99
+void NixieDynamic::write(uint8_t num)
 {
-
+  _numA = num / 10;
+  _numB = num % 10;
 }
 
 void NixieDynamic::_write()
 {
   uint8_t num;
-
   // if (sel == 0){
   //   sel = 1;
   // }
@@ -68,6 +73,16 @@ void NixieDynamic::_write()
     num = _numB;
   }
 
+  if(millis() - elapsed > _interval_blink){
+    //Disable Nixie
+    if(bBlink){
+      digitalWrite(_nixA, LOW);
+      digitalWrite(_nixB, LOW);
+    }
+
+    elapsed = millis();
+  }
+
   if((num & 0x01) > 0) digitalWrite(_pinA, HIGH);
   else digitalWrite(_pinA, LOW);
 
@@ -81,7 +96,13 @@ void NixieDynamic::_write()
   else digitalWrite(_pinD, LOW);
 }
 
-void uint8_t numA, uint8_t numB::blink(uint8_t interval)
+void NixieDynamic::startBlink(uint8_t interval)
 {
+  _interval_blink = interval;
+  bBlink = 1;
+}
 
+void NixieDynamic::stopBlink()
+{
+  bBlink = 0;
 }
