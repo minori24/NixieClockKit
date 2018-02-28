@@ -1,8 +1,10 @@
-# NixieClockKit
+# IN-12A Nixie Clock Kit by Fablab Kannai
+Nixie tube controller board and Arduino code for digital clock.
+
 1枚あたり2桁を表示するニキシー管コントロール基板です。
 
 ## 仕様
-Nixie Tube: IN-12A/B
+Nixie Tube: IN-12A/B (w/o DP)
 Controller: ATMEGA88/168/328
 
 ## 制御プログラム書き込み方法
