@@ -4,8 +4,16 @@
 
 #define TRAN 200
 #define NIX_INTERVAL_MSEC 10
+#define NIX_BLINK_MSEC 500
 #define PIN_BUTTON_MODE A0
 #define PIN_BUTTON_COUNT A2
+
+#define PIN_A 5
+#define PIN_B 6
+#define PIN_C 7
+#define PIN_D 8
+#define NIX_A 9
+#define NIX_B 10
 
 #define BUTTON_COUNT_SHORT 2
 #define BUTTON_COUNT_LONG 8
@@ -17,7 +25,7 @@
 #define MODE_TIMESET_MIN 102
 
 RTC_DS1307 RTC;
-NixieDynamic NIX;
+NixieDynamic NIXHour;
 
 uint8_t hour = 0;
 uint8_t minute = 0;
@@ -67,7 +75,8 @@ void setup() {
 
   mode = MODE_NORMAL;
 
-  NIX.init();
+  NIXHour.init(NIX_A, NIX_B, PIN_A, PIN_B, PIN_C, PIN_D);
+  NIXHour.setInterval(NIX_INTERVAL_MSEC);
 
   Serial.begin(9600);
   pciSetup(PIN_BUTTON_MODE);
@@ -102,11 +111,13 @@ void setMode(){
   //delay(50);
   if(mode == MODE_NORMAL){
     mode = MODE_TIMESET_HOUR;
-    Serial.println("Mode: HOUR");
+    NIXHour.startBlink(NIX_BLINK_MSEC);
+    Serial.println("Mode: SET_HOUR");
   }
   else if(mode == MODE_TIMESET_HOUR){
     mode = MODE_TIMESET_MIN;
-    Serial.println("Mode: MIN");
+    NIXHour.stopBlink();
+    Serial.println("Mode: SET_MIN");
   }
   else if(mode == MODE_TIMESET_MIN){
     mode = MODE_NORMAL;
@@ -160,7 +171,8 @@ void loop() {
     }
 
     if(mode == MODE_TIMESET_HOUR){
-       if(bCountStart){
+
+      if(bCountStart){
         if(digitalRead(PIN_BUTTON_COUNT) == LOW){
             buttonPressCount++;
             if(buttonPressCount > BUTTON_COUNT_LONG){
@@ -205,6 +217,6 @@ void loop() {
     DateTime date = RTC.now();
     Serial.println(String(hour) + ":" + String(minute) + ":" + String(date.second()));
 
-    NIX.write(hour);
+    NIXHour.write(hour);
  }
 }

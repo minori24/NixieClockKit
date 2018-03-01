@@ -1,3 +1,5 @@
+// Nixie Tube Dynamic Driver Library for Nixie Clock bu Fablab Kannai
+
 #include <FlexiTimer2.h>
 
 #define MODE_NORMAL 0
