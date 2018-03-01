@@ -73,14 +73,19 @@ void NixieDynamic::_write()
     num = _numB;
   }
 
-  if(millis() - elapsed > _interval_blink){
+  if(bBlink){
+    unsigned long d = millis() - elapsed;
     //Disable Nixie
-    if(bBlink){
+    if(d < _interval_blink){
       digitalWrite(_nixA, LOW);
       digitalWrite(_nixB, LOW);
     }
-
-    elapsed = millis();
+    else if(d < _interval_blink * 2){
+      
+    }
+    else{
+      elapsed = millis();
+    }
   }
 
   if((num & 0x01) > 0) digitalWrite(_pinA, HIGH);
