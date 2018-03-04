@@ -45,8 +45,8 @@ void pciSetup(byte pin)
     PCIFR  |= bit (digitalPinToPCICRbit(pin)); // clear any outstanding interrupt
     PCICR  |= bit (digitalPinToPCICRbit(pin)); // enable interrupt for the group
 }
-/
-ISR (PCINT1_vect) / handle pin change interrupt for A0 to A5 here
+
+ISR (PCINT1_vect) // handle pin change interrupt for A0 to A5 here
  {
     if(millis() - prev_t > 300){
       if(digitalRead(PIN_BUTTON_MODE) == LOW) setMode();
@@ -89,6 +89,7 @@ void getTime(){
   DateTime now = RTC.now();
   hour = now.hour();
   minute = now.minute();
+  second = now.second();
 }
 
 uint8_t transition(uint8_t bStart, uint8_t bEnd){
@@ -211,12 +212,13 @@ void loop() {
 
     delay(50);
     Wire.beginTransmission(ADDR_MIN);
-    Wire.write(minute);
+    if(second < 49) Wire.write(minute);
+    else Wire.write(second);
     Wire.endTransmission();
 
-    DateTime date = RTC.now();
-    Serial.println(String(hour) + ":" + String(minute) + ":" + String(date.second()));
+    Serial.println(String(hour) + ":" + String(minute) + ":" + String(second));
 
     NIXHour.write(hour);
- }
+  }
 }
+
