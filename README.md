@@ -1,13 +1,27 @@
 # IN-12A Nixie Clock Kit by Fablab Kannai
-Nixie tube controller board and Arduino code for digital clock.
+Nixie tube controller board and Arduino code for digital clock. Two nixie tubes for each board,
+multiple boards can be connected with pin headers/sockets soldered on board side.
 
-1枚あたり2桁を表示するニキシー管コントロール基板です。
+
+1枚あたり2桁を表示するニキシー管コントロール基板です。ピンソケット/ピンヘッダを基板に取り付けることで複数枚を接続し、
+表示する桁を拡張することが可能です。
 
 ## 仕様
-Nixie Tube: IN-12A/B (w/o DP)
+Nixie Tube: IN-12A/B (dp not used)
 Controller: ATMEGA88/168/328
 
-## 制御プログラム書き込み方法
-方法1: SPI Header Pinを使ってSPIから書き込む (参考: [Arduino IDE から、生の AVR に ISP でスケッチを書き込む方法（ArduinoIDE 1.6.4以降版）- nomolkのブログ](http://nomolk.hatenablog.com/entry/2016/06/21/001322))
 
-方法2: USB-UARTを使ってArduinoのプログラムを書き込む(Arduino Bootloaderが必要)
+Release
+## v1.0
+RTC付き時計完成版
+第1回ニキシー管組み立てワークショップ(2017/12/16)で使用
+
+## v2.0
+### 基板
+Footprintの間違いを修正
+I/Oピン名のシルクを追加
+制御基板とニキシー管基板を繋いでいたLong HoleをV-cutに変更
+
+### ファームウェア
+毎分残り10秒から分桁に秒を表示するよう変更
+
