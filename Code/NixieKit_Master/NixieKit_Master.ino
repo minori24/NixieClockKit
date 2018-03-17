@@ -33,6 +33,8 @@ uint8_t second = 0;
 uint16_t subcount = 0;
 uint8_t bTimeSetDone = 0;
 uint8_t bCountStart = 0;
+uint8_t cMinute = 0;
+uint8_t ledFlg = 0;
 
 
 uint8_t mode = MODE_NORMAL;
@@ -215,6 +217,19 @@ void loop() {
     if(second < 49) Wire.write(minute);
     else Wire.write(second);
     Wire.endTransmission();
+
+    if(minute != cMinute){
+      cMinute = minute;
+      if(ledFlg){
+        ledFlg = 0;
+        digitalWrite(A0, HIGH);
+        digitalWrite(A3, HIGH);
+      }
+      else{
+        digitalWrite(A0, LOW);
+        digitalWrite(A3, LOW);
+      }
+    }
 
     Serial.println(String(hour) + ":" + String(minute) + ":" + String(second));
 
