@@ -47,7 +47,7 @@ uint8_t mode = MODE_NORMAL;
 //   return bEnd;
 // }
 
-void receiveEvent() {
+void receiveEvent(int numByte) {
 
   while (0 < Wire.available()){
     temp = Wire.read();
@@ -80,5 +80,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  delay(1000);
 }

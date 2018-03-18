@@ -101,7 +101,7 @@ uint8_t transition(uint8_t bStart, uint8_t bEnd){
   return bEnd;
 }
 
-void receiveEvent() {
+void receiveEvent(int numByte) {
 
   while (0 < Wire.available()){
     temp = Wire.read();
