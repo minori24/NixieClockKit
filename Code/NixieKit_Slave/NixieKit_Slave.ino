@@ -1,5 +1,6 @@
 #include <FlexiTimer2.h>
 #include <Wire.h>
+#include "NixieDynamic.h"
 
 #define PIN_A 5
 #define PIN_B 6
@@ -16,14 +17,16 @@
 #define NIX_INTERVAL_MSEC 10
 #define NIX_BLINK_MSEC 500
 
+NixieDynamic NIXMin;
 
-uint8_t sel = 1;
+//uint8_t sel = 1;
 uint8_t numA = 0;
 uint8_t numB = 0;
 uint8_t minute = 0;
 uint8_t temp = 0;
 uint16_t subcount = 0;
 uint8_t mode = MODE_NORMAL;
+
 
 //
 // uint8_t transition(uint8_t bStart, uint8_t bEnd){
@@ -53,10 +56,10 @@ void receiveEvent() {
   if(temp > 99 && mode != temp){
     mode = temp;
     switch(mode){
-      MODE_NORMAL:
+      case  MODE_NORMAL:
         NIXMin.stopBlink();
         break;
-      MODE_TIMESET_MIN:
+      case MODE_TIMESET_MIN:
         NIXMin.startBlink(NIX_BLINK_MSEC);
         break;
       default:
