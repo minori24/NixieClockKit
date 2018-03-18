@@ -34,7 +34,7 @@ uint16_t subcount = 0;
 uint8_t bTimeSetDone = 0;
 uint8_t bCountStart = 0;
 uint8_t cMinute = 0;
-uint8_t ledFlg = 0;
+uint8_t ledFlg = 0; 
 
 
 uint8_t mode = MODE_NORMAL;
@@ -217,7 +217,7 @@ void loop() {
     if(second < 49) Wire.write(minute);
     else Wire.write(second);
     Wire.endTransmission();
-
+/*
     if(minute != cMinute){
       cMinute = minute;
       if(ledFlg){
@@ -230,7 +230,7 @@ void loop() {
         digitalWrite(A3, LOW);
       }
     }
-
+*/
     Serial.println(String(hour) + ":" + String(minute) + ":" + String(second));
 
     NIXHour.write(hour);
