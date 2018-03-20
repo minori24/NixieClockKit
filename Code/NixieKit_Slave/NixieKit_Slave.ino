@@ -68,6 +68,7 @@ void receiveEvent(int numByte) {
   }
 
   if(minute != temp && temp < 99) minute = temp;
+
 }
 
 void setup() {
@@ -80,5 +81,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  delay(1000);
+  delay(100);
+  NIXMin.write(minute);
 }
