@@ -3,7 +3,7 @@
 #include "NixieDynamic.h"
 
 #define TRAN 200
-#define NIX_INTERVAL_MSEC 10
+#define NIX_INTERVAL_MSEC 5
 #define NIX_BLINK_MSEC 500
 #define PIN_BUTTON_MODE A0
 #define PIN_BUTTON_COUNT A2
@@ -14,6 +14,8 @@
 #define PIN_D 8
 #define NIX_A 9
 #define NIX_B 10
+
+#define PIN_LED 1
 
 #define BUTTON_COUNT_SHORT 2
 #define BUTTON_COUNT_LONG 8
@@ -35,6 +37,7 @@ uint8_t bTimeSetDone = 0;
 uint8_t bCountStart = 0;
 uint8_t cMinute = 0;
 uint8_t ledFlg = 0; 
+uint8_t tSecond = 0;
 
 
 uint8_t mode = MODE_NORMAL;
@@ -63,6 +66,7 @@ void setup() {
   pinMode(PIN_BUTTON_COUNT, INPUT_PULLUP);
   pinMode(A1, OUTPUT);
   pinMode(A3, OUTPUT);
+  pinMode(PIN_LED, OUTPUT);
   digitalWrite(A1, LOW);
   digitalWrite(A3, LOW);
 
@@ -70,7 +74,7 @@ void setup() {
 
   RTC.begin();
   if (! RTC.isrunning()) {
-    Serial.println("RTC is NOT running!");
+    //Serial.println("RTC is NOT running!");
     // following line sets the RTC to the date & time this sketch was compiled
     RTC.adjust(DateTime(__DATE__, __TIME__));
   }
@@ -80,7 +84,7 @@ void setup() {
   NIXHour.init(NIX_A, NIX_B, PIN_A, PIN_B, PIN_C, PIN_D);
   NIXHour.setInterval(NIX_INTERVAL_MSEC);
 
-  Serial.begin(9600);
+  //Serial.begin(9600);
   pciSetup(PIN_BUTTON_MODE);
   pciSetup(PIN_BUTTON_COUNT);
   EICRA |= bit (ISC11);
@@ -151,7 +155,7 @@ void setTime(){
 
   }
 
-  Serial.println(String(hour) + ":" + String(minute));
+  //Serial.println(String(hour) + ":" + String(minute));
 
 }
 
@@ -161,7 +165,7 @@ void loop() {
   while(1){
       if(bTimeSetDone == 1){
         DateTime now = RTC.now();
-        DateTime newDate = DateTime(now.year(), now.month(), now.day(), hour, minute, 50);
+        DateTime newDate = DateTime(now.year(), now.month(), now.day(), hour, minute, 0);
         RTC.adjust(newDate);
         bTimeSetDone = 0;
      }
@@ -214,24 +218,26 @@ void loop() {
 
     delay(50);
     Wire.beginTransmission(ADDR_MIN);
-    if(second < 49) Wire.write(minute);
-    else Wire.write(second);
+    //if(second < 50) Wire.write(minute);
+    //else Wire.write(second);
+    if(second > 49 && mode == MODE_NORMAL) Wire.write(second);
+    else Wire.write(minute);
+    
     Wire.endTransmission();
-/*
-    if(minute != cMinute){
-      cMinute = minute;
+
+    if(second != tSecond){
+      tSecond = second;
       if(ledFlg){
+        digitalWrite(PIN_LED, HIGH);
         ledFlg = 0;
-        digitalWrite(A0, HIGH);
-        digitalWrite(A3, HIGH);
       }
       else{
-        digitalWrite(A0, LOW);
-        digitalWrite(A3, LOW);
+        digitalWrite(PIN_LED, LOW);
+        ledFlg = 1;
       }
     }
-*/
-    Serial.println(String(hour) + ":" + String(minute) + ":" + String(second));
+
+    //Serial.println(String(hour) + ":" + String(minute) + ":" + String(second));
 
     NIXHour.write(hour);
   }

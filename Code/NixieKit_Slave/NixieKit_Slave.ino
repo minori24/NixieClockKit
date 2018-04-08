@@ -9,50 +9,24 @@
 #define NIX_A 9
 #define NIX_B 10
 
-#define TRAN 10
 #define MODE_NORMAL 100
 #define MODE_TIMESET_MIN 102
-#define NIX_INTERVAL_MSEC 10
-
-#define NIX_INTERVAL_MSEC 10
+#define NIX_INTERVAL_MSEC 8
 #define NIX_BLINK_MSEC 500
 
 NixieDynamic NIXMin;
 
-//uint8_t sel = 1;
-uint8_t numA = 0;
-uint8_t numB = 0;
 uint8_t minute = 0;
 uint8_t temp = 0;
-uint16_t subcount = 0;
 uint8_t mode = MODE_NORMAL;
-
-
-//
-// uint8_t transition(uint8_t bStart, uint8_t bEnd){
-// /*
-//   for (uint8_t j=0; j<TRAN; j++){
-//     for (uint8_t i=100; i>0; i--){
-//       numA = bStart / 10;
-//       numB = bStart % 10;
-//       delay(i);
-//       numA = bEnd / 10;
-//       numB = bEnd % 10;
-//       delay(100 - i);
-//     }
-//   }
-// */
-//   numA = bEnd / 10;
-//   numB = bEnd % 10;
-//   return bEnd;
-// }
+uint8_t tMinute = 0;
 
 void receiveEvent(int numByte) {
 
-  while (0 < Wire.available()){
+  while (Wire.available() > 0){
     temp = Wire.read();
   }
-
+  
   if(temp > 99 && mode != temp){
     mode = temp;
     switch(mode){
@@ -66,21 +40,26 @@ void receiveEvent(int numByte) {
         break;
     }
   }
-
-  if(minute != temp && temp < 99) minute = temp;
-
+  else if(temp < 60){
+    minute = temp;
+    NIXMin.write(temp);
+  }
+  else{
+    
+  }
 }
 
 void setup() {
   NIXMin.init(NIX_A, NIX_B, PIN_A, PIN_B, PIN_C, PIN_D);
-  NIXMin.setInterval(NIX_INTERVAL_MSEC);
+  //NIXMin.setInterval(NIX_INTERVAL_MSEC);
 
   Wire.begin(8);
   Wire.onReceive(receiveEvent);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  delay(100);
-  NIXMin.write(minute);
+  while(1){
+    // put your main code here, to run repeatedly:
+
+  }
 }
