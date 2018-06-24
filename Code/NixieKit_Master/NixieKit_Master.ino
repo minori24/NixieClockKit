@@ -43,6 +43,7 @@ uint8_t tSecond = 0;
 uint8_t mode = MODE_NORMAL;
 
 unsigned long prev_t = 0;
+unsigned long elapsed_led = 0;
 
 void pciSetup(byte pin)
 {
@@ -224,9 +225,10 @@ void loop() {
     else Wire.write(minute);
     
     Wire.endTransmission();
-
+/*
     if(second != tSecond){
       tSecond = second;
+      
       if(ledFlg){
         digitalWrite(PIN_LED, HIGH);
         ledFlg = 0;
@@ -235,6 +237,19 @@ void loop() {
         digitalWrite(PIN_LED, LOW);
         ledFlg = 1;
       }
+    }
+*/
+    if(second != tSecond){
+      tSecond = second;
+
+      digitalWrite(PIN_LED, HIGH);
+      elapsed_led = millis();
+    }
+    else if(millis() - elapsed_led > 200){
+      digitalWrite(PIN_LED, LOW);
+    }
+    else{
+      digitalWrite(PIN_LED, HIGH);
     }
 
     //Serial.println(String(hour) + ":" + String(minute) + ":" + String(second));
